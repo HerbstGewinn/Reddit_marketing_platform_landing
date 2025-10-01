@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 254 251 255;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-900 antialiased;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-white shadow-glow transition hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-300;
+}
+
+.container-page {
+  @apply mx-auto w-full max-w-6xl px-6;
+}
