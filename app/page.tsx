@@ -1,4 +1,18 @@
 import Navbar from '@/components/Navbar'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
+  description: 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools. Start your 3-day free trial.',
+  openGraph: {
+    title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
+    description: 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools.',
+    url: '/',
+  },
+  alternates: {
+    canonical: '/',
+  },
+}
 
 function Hero() {
   return (
@@ -306,7 +320,7 @@ function CTA() {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-50 to-transparent" />
       <div className="container-page relative text-center">
         <h2 className="text-3xl font-bold">Ready to meet your next 100 customers?</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-gray-600">Join founders using redditmarketing.co to turn Reddit conversations into revenue.</p>
+        <p className="mx-auto mt-3 max-w-2xl text-gray-600">Join founders using LeadLift.app to turn Reddit conversations into revenue.</p>
         <div className="mt-8">
           <a className="btn-primary text-base px-7 py-3.5" href="#">Start for Free</a>
         </div>
@@ -337,7 +351,7 @@ function Testimonials() {
     <section id="reviews" className="container-page py-20">
       <div className="mx-auto max-w-5xl text-center">
         <h2 className="text-3xl font-bold">What our users say</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-gray-600">Real teams using redditmarketing.co to turn threads into revenue.</p>
+        <p className="mx-auto mt-3 max-w-2xl text-gray-600">Real teams using LeadLift.app to turn threads into revenue.</p>
       </div>
       <div className="mt-10 grid gap-6 md:grid-cols-3">
         {reviews.map((r, i) => (
@@ -445,8 +459,8 @@ function Footer() {
       <div className="container-page flex items-center justify-between text-sm text-gray-600">
         <span>© {new Date().getFullYear()} leadlift.app</span>
         <div className="flex gap-4">
-          <a href="#">Terms</a>
-          <a href="#">Privacy</a>
+          <a href="/terms-of-service" className="hover:text-gray-900">Terms of Service</a>
+          <a href="/privacy-policy" className="hover:text-gray-900">Privacy Policy</a>
         </div>
       </div>
     </footer>

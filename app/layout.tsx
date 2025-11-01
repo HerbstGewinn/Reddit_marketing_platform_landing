@@ -1,24 +1,27 @@
 import './globals.css'
 import type { Metadata } from 'next'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://redditmarketing.co'
-const titleDefault = 'Reddit Marketing Tool — Get Customers from Reddit | redditmarketing.co'
-const descriptionDefault = 'Reddit marketing software that finds buyers, drafts helpful replies, and turns Reddit conversations into customers. Safe, authentic, and built for growth.'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://leadlift.app'
+const titleDefault = 'Reddit Marketing Without Getting Banned | LeadLift.app'
+const descriptionDefault = 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools for growth.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: titleDefault,
-    template: '%s · redditmarketing.co'
+    template: '%s · LeadLift.app'
   },
   description: descriptionDefault,
   keywords: [
     'reddit marketing',
     'reddit marketing tool',
     'reddit lead generation',
-    'reddit advertising',
-    'find customers on reddit',
-    'reddit marketing software'
+    'reddit without getting banned',
+    'reddit marketing software',
+    'reddit comment generator',
+    'reddit subreddit targeting',
+    'AI reddit marketing',
+    'reddit growth tool'
   ],
   alternates: {
     canonical: '/'
@@ -26,15 +29,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: siteUrl,
-    siteName: 'redditmarketing.co',
-    title: 'Reddit Marketing Tool — Get Customers from Reddit',
+    siteName: 'LeadLift.app',
+    title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
     description: descriptionDefault,
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'redditmarketing.co' }]
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'LeadLift.app' }]
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@redditmarketing',
-    title: 'Reddit Marketing Tool — Get Customers from Reddit',
+    site: '@herbst_laurin',
+    title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
     description: descriptionDefault,
     images: ['/og.png']
   },
@@ -55,10 +58,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const orgJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'redditmarketing.co',
+    name: 'LeadLift.app',
     url: siteUrl,
     logo: `${siteUrl}/og.png`,
-    sameAs: []
+    sameAs: [
+      'https://www.reddit.com/user/InternetVisible8661/',
+      'https://x.com/herbst_laurin/',
+      'https://www.linkedin.com/in/laurin-herbst/'
+    ]
   }
 
   const faqJsonLd = {
