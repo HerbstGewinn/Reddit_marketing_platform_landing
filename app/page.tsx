@@ -165,19 +165,19 @@ function SocialProof() {
                   <div className="flex items-center gap-4 text-xs">
                     {/* Upvotes */}
                     <div className="flex items-center gap-1.5">
-                      <div className="flex items-center gap-1 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors" onClick={(e) => e.preventDefault()}>
+                      <div className="flex items-center gap-1 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors pointer-events-none">
                         <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M3.293 9.707a1 1 0 011.414 0L10 14.586l5.293-4.879a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z" clipRule="evenodd" />
                         </svg>
                         <span className="font-semibold text-gray-900">{post.upvotes}</span>
                       </div>
-                      <svg className="w-4 h-4 text-gray-400 rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-4 h-4 text-gray-400 rotate-180 pointer-events-none" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M3.293 9.707a1 1 0 011.414 0L10 14.586l5.293-4.879a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z" clipRule="evenodd" />
                       </svg>
                     </div>
                     
                     {/* Comments */}
-                    <div className="flex items-center gap-1.5 text-gray-600">
+                    <div className="flex items-center gap-1.5 text-gray-600 pointer-events-none">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
@@ -185,14 +185,14 @@ function SocialProof() {
                     </div>
                     
                     {/* Save */}
-                    <div className="text-gray-600 hover:text-gray-900" onClick={(e) => e.preventDefault()}>
+                    <div className="text-gray-600 hover:text-gray-900 pointer-events-none">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                       </svg>
                     </div>
                     
                     {/* Share */}
-                    <div className="flex items-center gap-1 text-gray-600 hover:text-gray-900" onClick={(e) => e.preventDefault()}>
+                    <div className="flex items-center gap-1 text-gray-600 hover:text-gray-900 pointer-events-none">
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
                       </svg>
