@@ -7,7 +7,7 @@ function Hero() {
       <div className="pointer-events-none absolute -right-32 -top-12 h-80 w-80 rounded-full bg-brand-100 blur-3xl" />
       <div className="container-page pt-24 pb-16 text-center md:pt-32 md:pb-32 lg:pt-40 lg:pb-40">
         <span className="mx-auto inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm">NEXT GENERATION OF REDDIT MARKETING</span>
-        <h1 className="mx-auto mt-8 max-w-6xl text-5xl font-extrabold leading-[1.1] tracking-tight text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="mx-auto mt-8 max-w-6xl text-5xl font-extrabold leading-[1.2] pb-1 tracking-tight text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
           Reddit Marketing
           <span className="block bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 bg-clip-text text-transparent">without getting banned</span>
         </h1>
@@ -61,6 +61,194 @@ function Steps() {
             </ul>
           </div>
         ))}
+      </div>
+    </section>
+  )
+}
+
+function SocialProof() {
+  const redditPosts = [
+    {
+      subreddit: 'r/VibeCodeCamp',
+      title: "I woke up to 100$ MRR. Ivan's believe it 🥺⏱️",
+      upvotes: '24',
+      comments: 21,
+      views: '13K',
+      flair: 'Vibe Coding',
+      timeAgo: '1 mo. ago'
+    },
+    {
+      subreddit: 'r/nocode',
+      title: "I've coded an App with 100% AI and it made me 300$ just two days after Launch.",
+      upvotes: '63',
+      comments: 43,
+      views: '99K',
+      flair: 'Success Story',
+      timeAgo: '6 mo. ago'
+    },
+    {
+      subreddit: 'r/SideProject',
+      title: 'I made an app that turns your Uni lectures into interactive Exams – And it\'s completely free',
+      upvotes: '200',
+      comments: 58,
+      views: '30K',
+      flair: null,
+      timeAgo: '1 yr. ago'
+    }
+  ]
+
+  return (
+    <section className="bg-gray-50 py-16 md:py-24">
+      <div className="container-page">
+        <div className="mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              Built by someone who <span className="bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 bg-clip-text text-transparent">actually grew on Reddit</span>
+            </h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+              I used these exact strategies to build my audience and grow my business. Here's proof it works.
+            </p>
+          </div>
+          
+          <div className="grid gap-6 md:grid-cols-3">
+            {redditPosts.map((post, i) => (
+              <a 
+                key={i} 
+                href="https://www.reddit.com/user/InternetVisible8661/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group"
+              >
+                {/* Reddit Post Header */}
+                <div className="p-4 pb-3 border-b border-gray-100">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <span className="text-white text-xs font-bold">r</span>
+                      </div>
+                      <span className="text-xs font-semibold text-gray-900">{post.subreddit}</span>
+                      <span className="text-xs text-gray-500">•</span>
+                      <span className="text-xs text-gray-500">{post.timeAgo}</span>
+                    </div>
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+                  </div>
+                  
+                  {/* Post Title */}
+                  <h3 className="text-sm font-semibold text-gray-900 mb-2 leading-snug line-clamp-3 group-hover:text-brand-600 transition-colors">{post.title}</h3>
+                  
+                  {/* Flair */}
+                  {post.flair && (
+                    <span className="inline-block mt-2 px-2.5 py-0.5 text-xs font-medium rounded-full bg-blue-100 text-blue-700">
+                      {post.flair}
+                    </span>
+                  )}
+                </div>
+                
+                {/* Engagement Metrics */}
+                <div className="p-4 pt-3">
+                  <div className="flex items-center gap-4 text-xs">
+                    {/* Upvotes */}
+                    <div className="flex items-center gap-1.5">
+                      <div className="flex items-center gap-1 px-2 py-1.5 rounded hover:bg-gray-100 transition-colors" onClick={(e) => e.preventDefault()}>
+                        <svg className="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M3.293 9.707a1 1 0 011.414 0L10 14.586l5.293-4.879a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z" clipRule="evenodd" />
+                        </svg>
+                        <span className="font-semibold text-gray-900">{post.upvotes}</span>
+                      </div>
+                      <svg className="w-4 h-4 text-gray-400 rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M3.293 9.707a1 1 0 011.414 0L10 14.586l5.293-4.879a1 1 0 111.414 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    
+                    {/* Comments */}
+                    <div className="flex items-center gap-1.5 text-gray-600">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                      <span>{post.comments}</span>
+                    </div>
+                    
+                    {/* Save */}
+                    <div className="text-gray-600 hover:text-gray-900" onClick={(e) => e.preventDefault()}>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                      </svg>
+                    </div>
+                    
+                    {/* Share */}
+                    <div className="flex items-center gap-1 text-gray-600 hover:text-gray-900" onClick={(e) => e.preventDefault()}>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                      </svg>
+                      <span className="text-xs">Share</span>
+                    </div>
+                  </div>
+                  
+                  {/* Views */}
+                  <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-xs text-gray-600">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                      <span className="font-semibold">{post.views} views</span>
+                    </div>
+                    <span className="text-xs text-blue-600 font-medium">See More Insights</span>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center">
+            <p className="text-gray-600 mb-6">Real results from real Reddit posts</p>
+            <div className="flex flex-wrap items-center justify-center gap-6 mb-6">
+              <div className="inline-flex items-center gap-2 text-sm font-medium text-brand-700">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Verified Reddit account growth
+              </div>
+            </div>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a 
+                href="https://www.reddit.com/user/InternetVisible8661/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-brand-300 hover:text-brand-700 transition-colors shadow-sm hover:shadow-md"
+              >
+                <svg className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+                </svg>
+                u/InternetVisible8661
+              </a>
+              <a 
+                href="https://x.com/herbst_laurin/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-brand-300 hover:text-brand-700 transition-colors shadow-sm hover:shadow-md"
+              >
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                @herbst_laurin
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/laurin-herbst/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-brand-300 hover:text-brand-700 transition-colors shadow-sm hover:shadow-md"
+              >
+                <svg className="w-5 h-5 text-[#0077b5]" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
@@ -177,44 +365,53 @@ function Testimonials() {
 function Pricing() {
   return (
     <section id="pricing" className="container-page py-20">
-      <div className="mx-auto max-w-5xl text-center">
-        <h2 className="text-3xl font-bold">Simple, fair pricing</h2>
-        <p className="mx-auto mt-3 max-w-2xl text-gray-600">Start free. Upgrade when you are ready to scale.</p>
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-3xl font-bold">Get started with a 3 day free trial</h2>
+        <p className="mx-auto mt-3 max-w-2xl text-gray-600">One plan, Affordable pricing, No hidden fees, Cancel anytime.</p>
       </div>
-      <div className="mx-auto mt-10 grid max-w-5xl gap-6 md:grid-cols-3">
-        <div className="rounded-2xl border border-gray-100 p-6">
-          <h3 className="text-lg font-semibold">Starter</h3>
-          <p className="mt-2 text-sm text-gray-600">For testing the waters</p>
-          <div className="mt-4 text-3xl font-bold">Free</div>
-          <ul className="mt-4 space-y-2 text-sm text-gray-700">
-            <li>• AI product setup</li>
-            <li>• 3 tracked subreddits</li>
-            <li>• 20 AI reply drafts / mo</li>
-          </ul>
-          <a className="btn-primary mt-6 inline-flex w-full justify-center" href="#">Get started</a>
-        </div>
-        <div className="rounded-2xl border-2 border-brand-300 p-6 shadow-glow">
-          <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-medium text-brand-700">Most Popular</span>
-          <h3 className="mt-2 text-lg font-semibold">Growth</h3>
-          <p className="mt-2 text-sm text-gray-600">Everything to scale</p>
-          <div className="mt-4 text-3xl font-bold">$49<span className="text-base font-medium text-gray-500">/mo</span></div>
-          <ul className="mt-4 space-y-2 text-sm text-gray-700">
-            <li>• 15 tracked subreddits</li>
-            <li>• Unlimited reply drafts</li>
-            <li>• Inbox + follow-ups</li>
-          </ul>
-          <a className="btn-primary mt-6 inline-flex w-full justify-center" href="#">Start free trial</a>
-        </div>
-        <div className="rounded-2xl border border-gray-100 p-6">
-          <h3 className="text-lg font-semibold">Pro</h3>
-          <p className="mt-2 text-sm text-gray-600">For teams and agencies</p>
-          <div className="mt-4 text-3xl font-bold">$99<span className="text-base font-medium text-gray-500">/mo</span></div>
-          <ul className="mt-4 space-y-2 text-sm text-gray-700">
-            <li>• Unlimited subreddits</li>
-            <li>• Team collaboration</li>
-            <li>• Priority support</li>
-          </ul>
-          <a className="btn-primary mt-6 inline-flex w-full justify-center" href="#">Contact sales</a>
+      <div className="mx-auto mt-12 max-w-2xl">
+        <div className="rounded-2xl border-2 border-brand-300 p-8 shadow-glow bg-white">
+          <div className="flex items-center justify-center">
+            <span className="rounded-full bg-brand-50 px-3 py-1 text-sm font-medium text-brand-700">Most Popular</span>
+          </div>
+          <h3 className="mt-4 text-center text-2xl font-semibold">Pro</h3>
+          <div className="mt-6 text-center">
+            <div className="text-sm font-medium text-gray-600">3 days free</div>
+            <div className="mt-2 text-4xl font-bold">
+              then <span className="text-3xl">$25</span><span className="text-xl font-medium text-gray-500">/month</span>
+            </div>
+          </div>
+          <p className="mt-4 text-center text-gray-600">For businesses and marketers who want to grow on Reddit</p>
+          <div className="mt-8">
+            <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
+            <ul className="space-y-3 text-gray-700">
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
+                <span>A growing library 50+ viral post templates</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
+                <span>Unlimited AI lead generation</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
+                <span>Unlimited AI comment generation</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
+                <span>Subreddit targeting</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
+                <span>Relevant post tracking</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
+                <span>Priority support</span>
+              </li>
+            </ul>
+          </div>
+          <a className="btn-primary mt-8 inline-flex w-full justify-center text-lg py-4" href="/pricing">Start your free trial</a>
         </div>
       </div>
     </section>
@@ -246,7 +443,7 @@ function Footer() {
   return (
     <footer className="border-t border-gray-100 py-10">
       <div className="container-page flex items-center justify-between text-sm text-gray-600">
-        <span>© {new Date().getFullYear()} redditmarketing.co</span>
+        <span>© {new Date().getFullYear()} leadlift.app</span>
         <div className="flex gap-4">
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
@@ -261,6 +458,7 @@ export default function Page() {
     <main>
       <Navbar />
       <Hero />
+      <SocialProof />
       <LongSteps />
       <Steps />
       <Testimonials />
