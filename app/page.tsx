@@ -23,9 +23,9 @@ function Hero() {
         <span className="mx-auto inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm">NEXT GENERATION OF REDDIT MARKETING</span>
         <h1 className="mx-auto mt-8 max-w-6xl text-5xl font-extrabold leading-[1.2] pb-1 tracking-tight text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
           Reddit Marketing
-          <span className="block bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 bg-clip-text text-transparent">without getting banned</span>
+          <span className="block bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 bg-clip-text text-transparent pb-2">without getting banned</span>
         </h1>
-        <p className="mx-auto mt-8 max-w-3xl text-xl text-gray-600 leading-relaxed">
+        <p className="mx-auto mt-10 max-w-3xl text-xl text-gray-600 leading-relaxed">
           Describe your product, and our AI finds buyers on Reddit 24/7 — helping you
           join conversations, build trust, and convert.
         </p>

@@ -1,0 +1,9 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer ring (light purple) -->
+  <circle cx="90" cy="90" r="85" stroke="#dccfff" stroke-width="4" fill="none"/>
+  <!-- Main circle with border (purple) -->
+  <circle cx="90" cy="90" r="65" stroke="#7f4dff" stroke-width="4" fill="none"/>
+  <!-- Inner circle -->
+  <circle cx="90" cy="90" r="45" fill="#7f4dff" fill-opacity="0.2"/>
+</svg>
+

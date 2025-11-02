@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     siteName: 'LeadLift.app',
     title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
     description: descriptionDefault,
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'LeadLift.app' }]
+    images: [{ url: '/icon.svg', width: 1200, height: 630, alt: 'LeadLift.app' }]
   },
   twitter: {
     card: 'summary_large_image',
     site: '@herbst_laurin',
     title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
     description: descriptionDefault,
-    images: ['/og.png']
+    images: ['/icon.svg']
   },
   robots: {
     index: true,
@@ -60,7 +60,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     '@type': 'Organization',
     name: 'LeadLift.app',
     url: siteUrl,
-    logo: `${siteUrl}/og.png`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteUrl}/icon.svg`,
+      width: 32,
+      height: 32
+    },
+    image: `${siteUrl}/icon.svg`,
     sameAs: [
       'https://www.reddit.com/user/InternetVisible8661/',
       'https://x.com/herbst_laurin/',
