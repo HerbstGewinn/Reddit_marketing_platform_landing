@@ -30,7 +30,7 @@ function Hero() {
           join conversations, build trust, and convert.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <a href="#cta" className="btn-primary text-lg px-8 py-4">Start Getting Customers for Free</a>
+          <a href="https://app.leadlift.app/" className="btn-primary text-lg px-8 py-4">Start Getting Customers for Free</a>
           <a href="#how" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">See how it works</a>
         </div>
         <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
@@ -322,7 +322,7 @@ function CTA() {
         <h2 className="text-3xl font-bold">Ready to meet your next 100 customers?</h2>
         <p className="mx-auto mt-3 max-w-2xl text-gray-600">Join founders using LeadLift.app to turn Reddit conversations into revenue.</p>
         <div className="mt-8">
-          <a className="btn-primary text-base px-7 py-3.5" href="#">Start for Free</a>
+          <a className="btn-primary text-base px-7 py-3.5" href="https://app.leadlift.app/">Start for Free</a>
         </div>
       </div>
     </section>
@@ -425,7 +425,7 @@ function Pricing() {
               </li>
             </ul>
           </div>
-          <a className="btn-primary mt-8 inline-flex w-full justify-center text-lg py-4" href="/pricing">Start your free trial</a>
+          <a className="btn-primary mt-8 inline-flex w-full justify-center text-lg py-4" href="https://app.leadlift.app/">Start your free trial</a>
         </div>
       </div>
     </section>

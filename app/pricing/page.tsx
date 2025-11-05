@@ -77,7 +77,7 @@ export default function PricingPage() {
                 </ul>
               </div>
               
-              <a className="btn-primary mt-10 inline-flex w-full justify-center text-lg py-4" href="#">
+              <a className="btn-primary mt-10 inline-flex w-full justify-center text-lg py-4" href="https://app.leadlift.app/">
                 Start your free trial
               </a>
             </div>

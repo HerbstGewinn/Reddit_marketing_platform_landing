@@ -13,8 +13,8 @@ export default function Navbar() {
           <a href="/#faq" className="hover:text-gray-900">FAQ</a>
         </nav>
         <div className="flex items-center gap-3">
-          <a href="#" className="text-sm text-gray-600 hover:text-gray-900">Login</a>
-          <a href="#cta" className="btn-primary">Start Growing</a>
+          <a href="https://app.leadlift.app/" className="text-sm text-gray-600 hover:text-gray-900">Login</a>
+          <a href="https://app.leadlift.app/" className="btn-primary">Start Growing</a>
         </div>
       </div>
     </header>
