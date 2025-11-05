@@ -273,22 +273,22 @@ function LongSteps() {
     {
       title: 'Paste your product URL',
       desc: 'We generate a crisp description, value props and ICP automatically — edit anything in seconds.',
+      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/lead-inbox.png'
     },
     {
       title: 'Get your subreddit shortlist',
       desc: 'We score communities by size, intent and fit so you focus only where buyers hang out.',
-    },
-    {
-      title: 'Track live conversations',
-      desc: 'Real-time monitor of questions, pain points and buyer keywords across your shortlist.',
+      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/subreddits.png'
     },
     {
       title: 'Reply helpfully (with AI drafts)',
       desc: 'Approve or edit AI-crafted replies that add value first — no spam, always on-brand.',
+      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/lead-inbox2.png'
     },
     {
       title: 'Convert & go viral',
       desc: 'Use our viral post templates to get karma, leads & customers.',
+      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/viral-post.png'
     }
   ]
 
@@ -304,7 +304,13 @@ function LongSteps() {
                   <h3 className="text-lg font-semibold md:text-xl">{s.title}</h3>
                   <p className="mt-2 text-gray-600">{s.desc}</p>
                 </div>
-                <div className="order-first h-40 rounded-xl bg-gray-100 md:order-none md:h-52" />
+                <div className="order-first h-40 rounded-xl bg-gray-100 md:order-none md:h-52 overflow-hidden">
+                  <img 
+                    src={s.image} 
+                    alt={s.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </li>
           ))}
