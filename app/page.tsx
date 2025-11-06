@@ -1,5 +1,7 @@
 import Navbar from '@/components/Navbar'
 import type { Metadata } from 'next'
+import Hero from './components/Hero'
+import LongSteps from './components/LongSteps'
 
 export const metadata: Metadata = {
   title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
@@ -14,46 +16,22 @@ export const metadata: Metadata = {
   },
 }
 
-function Hero() {
-  return (
-    <section className="relative overflow-hidden">
-      <div className="pointer-events-none absolute -left-32 -top-32 h-96 w-96 rounded-full bg-brand-200 blur-3xl" />
-      <div className="pointer-events-none absolute -right-32 -top-12 h-80 w-80 rounded-full bg-brand-100 blur-3xl" />
-      <div className="container-page pt-24 pb-16 text-center md:pt-32 md:pb-32 lg:pt-40 lg:pb-40">
-        <span className="mx-auto inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-4 py-2 text-sm font-medium text-brand-700 shadow-sm">NEXT GENERATION OF REDDIT MARKETING</span>
-        <h1 className="mx-auto mt-8 max-w-6xl text-5xl font-extrabold leading-[1.2] pb-1 tracking-tight text-gray-900 sm:text-6xl md:text-7xl lg:text-8xl">
-          Reddit Marketing
-          <span className="block bg-gradient-to-r from-brand-600 via-brand-500 to-brand-700 bg-clip-text text-transparent pb-2">without getting banned</span>
-        </h1>
-        <p className="mx-auto mt-10 max-w-3xl text-xl text-gray-600 leading-relaxed">
-          Describe your product, and our AI finds buyers on Reddit 24/7 — helping you
-          join conversations, build trust, and convert.
-        </p>
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-          <a href="https://app.leadlift.app/" className="btn-primary text-lg px-8 py-4">Start Getting Customers for Free</a>
-          <a href="#how" className="text-base font-medium text-gray-700 hover:text-gray-900 transition-colors">See how it works</a>
-        </div>
-        <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
-          <div className="aspect-video w-full bg-gray-100"></div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 function Steps() {
   const items = [
     {
       title: 'Describe your product',
-      points: ['Auto-filled by AI or manual input', 'Subreddit suggestions tailored to you']
+      points: ['Auto-filled by AI or manual input', 'Subreddit suggestions tailored to you'],
+      image: 'https://izioxpadsoodegpuvgpl.supabase.co/storage/v1/object/public/leadlift_landingpage_videos/describe-product-banner.png'
     },
     {
       title: 'Engage with buyers',
-      points: ['Tracks relevant threads', 'Crafts helpful replies, you approve']
+      points: ['Tracks relevant threads', 'Crafts helpful replies, you approve'],
+      image: 'https://izioxpadsoodegpuvgpl.supabase.co/storage/v1/object/public/leadlift_landingpage_videos/engage-banner.png'
     },
     {
       title: 'Go viral',
-      points: ['Proven Reddit Post templates', 'Market indirectly without getting banned']
+      points: ['Proven Reddit Post templates', 'Market indirectly without getting banned'],
+      image: 'https://izioxpadsoodegpuvgpl.supabase.co/storage/v1/object/public/leadlift_landingpage_videos/viral-banner.png'
     }
   ]
 
@@ -63,7 +41,13 @@ function Steps() {
       <div className="mt-12 grid gap-8 md:grid-cols-3">
         {items.map((step, i) => (
           <div key={i} className="rounded-2xl border border-gray-100 p-6 shadow-sm">
-            <div className="aspect-video w-full rounded-lg bg-gray-100" />
+            <div className="aspect-video w-full rounded-lg bg-gray-100 overflow-hidden">
+              <img 
+                src={step.image} 
+                alt={step.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h3 className="mt-5 text-xl font-semibold">Step {i + 1}: {step.title}</h3>
             <ul className="mt-3 space-y-2 text-sm text-gray-600">
               {step.points.map((p, j) => (
@@ -122,6 +106,14 @@ function SocialProof() {
             <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
               I used these exact strategies to build my audience and grow my business. Here's proof it works.
             </p>
+            <div className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200">
+              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <span className="text-sm font-medium text-amber-800">
+                I got my account banned refining this tool, so that it won't happen to you
+              </span>
+            </div>
           </div>
           
           <div className="grid gap-6 md:grid-cols-3">
@@ -268,57 +260,6 @@ function SocialProof() {
   )
 }
 
-function LongSteps() {
-  const steps = [
-    {
-      title: 'Paste your product URL',
-      desc: 'We generate a crisp description, value props and ICP automatically — edit anything in seconds.',
-      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/lead-inbox.png'
-    },
-    {
-      title: 'Get your subreddit shortlist',
-      desc: 'We score communities by size, intent and fit so you focus only where buyers hang out.',
-      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/subreddits.png'
-    },
-    {
-      title: 'Reply helpfully (with AI drafts)',
-      desc: 'Approve or edit AI-crafted replies that add value first — no spam, always on-brand.',
-      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/lead-inbox2.png'
-    },
-    {
-      title: 'Convert & go viral',
-      desc: 'Use our viral post templates to get karma, leads & customers.',
-      image: 'https://keussdfrlnqzqvkwmibj.supabase.co/storage/v1/object/public/landingpage_pictures/viral-post.png'
-    }
-  ]
-
-  return (
-    <section id="deep-how" className="container-page py-10 md:py-16">
-      <div className="mx-auto max-w-5xl">
-        <ol className="relative border-l border-gray-200 pl-6 md:pl-8">
-          {steps.map((s, i) => (
-            <li key={i} className="mb-10 ml-2 md:ml-4">
-              <span className="absolute -left-3 mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-600 text-xs font-semibold text-white md:-left-3.5">{i + 1}</span>
-              <div className="grid items-center gap-6 md:grid-cols-2">
-                <div>
-                  <h3 className="text-lg font-semibold md:text-xl">{s.title}</h3>
-                  <p className="mt-2 text-gray-600">{s.desc}</p>
-                </div>
-                <div className="order-first h-40 rounded-xl bg-gray-100 md:order-none md:h-52 overflow-hidden">
-                  <img 
-                    src={s.image} 
-                    alt={s.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </section>
-  )
-}
 
 function CTA() {
   return (
