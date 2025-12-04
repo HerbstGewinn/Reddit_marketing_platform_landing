@@ -38,6 +38,8 @@ function StepItem({ step, index }: { step: { title: string; desc: string; video:
             playsInline
             muted
             loop
+            preload="metadata"
+            style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
           />
         </div>
       </div>

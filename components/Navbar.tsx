@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/80 backdrop-blur">
+    <header className="sticky top-0 z-40 w-full border-b border-gray-100 bg-white/95 md:bg-white/80 backdrop-blur-sm md:backdrop-blur">
       <div className="container-page flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-2">
           <span className="inline-block h-6 w-6 rounded-full border-2 border-brand-500 ring-2 ring-brand-200" />

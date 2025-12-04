@@ -46,6 +46,8 @@ function Steps() {
                 src={step.image} 
                 alt={step.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                style={{ WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }}
               />
             </div>
             <h3 className="mt-5 text-xl font-semibold">Step {i + 1}: {step.title}</h3>
