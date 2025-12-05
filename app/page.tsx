@@ -4,10 +4,10 @@ import Hero from './components/Hero'
 import LongSteps from './components/LongSteps'
 
 export const metadata: Metadata = {
-  title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
+  title: 'LeadLift: Reddit Marketing Without Getting Banned',
   description: 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools. Start your 3-day free trial.',
   openGraph: {
-    title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
+    title: 'LeadLift: Reddit Marketing Without Getting Banned',
     description: 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools.',
     url: '/',
   },
@@ -352,7 +352,7 @@ function Pricing() {
             <div className="mt-2 text-4xl font-bold">
               then <span className="text-3xl">$25</span><span className="text-xl font-medium text-gray-500">/month</span>
             </div>
-          </div>
+        </div>
           <p className="mt-4 text-center text-gray-600">For businesses and marketers who want to grow on Reddit</p>
           <div className="mt-8">
             <h4 className="font-semibold text-gray-900 mb-4">What's included:</h4>
@@ -381,8 +381,8 @@ function Pricing() {
                 <span className="mt-1.5 inline-block h-2 w-2 rounded-full bg-brand-500 flex-shrink-0" />
                 <span>Priority support</span>
               </li>
-            </ul>
-          </div>
+          </ul>
+        </div>
           <a className="btn-primary mt-8 inline-flex w-full justify-center text-lg py-4" href="https://app.leadlift.app/">Start your free trial</a>
         </div>
       </div>

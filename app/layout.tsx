@@ -2,14 +2,14 @@ import './globals.css'
 import type { Metadata } from 'next'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://leadlift.app'
-const titleDefault = 'Reddit Marketing Without Getting Banned | LeadLift.app'
+const titleDefault = 'LeadLift | Reddit Marketing Without Getting Banned'
 const descriptionDefault = 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools for growth.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: titleDefault,
-    template: '%s · LeadLift.app'
+    template: '%s · LeadLift'
   },
   description: descriptionDefault,
   keywords: [
@@ -26,11 +26,23 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/'
   },
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.svg', type: 'image/svg+xml', sizes: 'any' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/icon.svg' }
+    ]
+  },
+  manifest: '/manifest.webmanifest',
   openGraph: {
     type: 'website',
     url: siteUrl,
-    siteName: 'LeadLift.app',
-    title: 'Reddit Marketing Without Getting Banned | LeadLift.app',
+    siteName: 'LeadLift',
+    title: 'LeadLift | Reddit Marketing Without Getting Banned',
     description: descriptionDefault,
     images: [{ url: '/icon.svg', width: 1200, height: 630, alt: 'LeadLift.app' }]
   },
