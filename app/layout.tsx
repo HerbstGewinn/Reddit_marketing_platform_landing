@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'reddit growth tool'
   ],
   alternates: {
-    canonical: '/'
+    canonical: siteUrl
   },
   icons: {
     icon: [

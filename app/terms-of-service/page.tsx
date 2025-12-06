@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Terms of Service | LeadLift.app',
     description: 'Read LeadLift.app terms of service to understand the rules and guidelines for using our Reddit marketing platform and services.',
-    url: '/terms-of-service',
+    url: 'https://leadlift.app/terms-of-service',
   },
   alternates: {
-    canonical: '/terms-of-service',
+    canonical: 'https://leadlift.app/terms-of-service',
   },
   robots: {
     index: true,

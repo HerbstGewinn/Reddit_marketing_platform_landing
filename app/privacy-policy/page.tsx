@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Privacy Policy | LeadLift.app',
     description: 'Read LeadLift.app privacy policy to understand how we collect, use, and protect your personal information when you use our Reddit marketing platform.',
-    url: '/privacy-policy',
+    url: 'https://leadlift.app/privacy-policy',
   },
   alternates: {
-    canonical: '/privacy-policy',
+    canonical: 'https://leadlift.app/privacy-policy',
   },
   robots: {
     index: true,

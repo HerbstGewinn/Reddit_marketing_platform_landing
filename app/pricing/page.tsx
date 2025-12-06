@@ -7,10 +7,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pricing - Reddit Marketing Tool | LeadLift.app',
     description: 'Simple, affordable pricing for Reddit marketing. Start with a 3-day free trial, then $25/month. Unlimited AI lead generation, comment generation, subreddit targeting, and priority support.',
-    url: '/pricing',
+    url: 'https://leadlift.app/pricing',
   },
   alternates: {
-    canonical: '/pricing',
+    canonical: 'https://leadlift.app/pricing',
   },
 }
 

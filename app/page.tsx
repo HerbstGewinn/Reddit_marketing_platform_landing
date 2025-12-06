@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'LeadLift: Reddit Marketing Without Getting Banned',
     description: 'Reddit marketing software that helps you find buyers, generate leads, and convert without getting banned. AI-powered comment generation, subreddit targeting, and authentic engagement tools.',
-    url: '/',
+    url: 'https://leadlift.app/',
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://leadlift.app/',
   },
 }
 
